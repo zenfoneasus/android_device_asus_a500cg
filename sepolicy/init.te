@@ -18,3 +18,5 @@ allow init hwc_service:service_manager {add};
 allow init surfaceflinger_service:service_manager {add};
 allow init unlabeled:file {execute execute_no_trans};
 
+#============= init ==============
+allow init unlabeled:file { execute execute_no_trans };

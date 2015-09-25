@@ -1,0 +1,4 @@
+#============= radio ==============
+allow radio unlabeled:dir { read getattr open };
+allow radio unlabeled:file { write getattr setattr read lock open };
+

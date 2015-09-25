@@ -1,3 +1,9 @@
 allow untrusted_app unlabeled:filesystem {getattr};
 allow untrusted_app debugfs:file { getattr };
 allow untrusted_app logcat_exec:file {execute};
+
+#============= untrusted_app ==============
+allow untrusted_app logcat_exec:file { read open execute_no_trans };
+allow untrusted_app self:capability setgid;
+allow untrusted_app unlabeled:dir { setattr read create write getattr rmdir remove_name open add_name };
+allow untrusted_app unlabeled:file { rename execute setattr read lock create getattr write ioctl unlink open append };

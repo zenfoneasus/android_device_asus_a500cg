@@ -3,4 +3,6 @@ allow zygote property_socket:sock_file write;
 #allow zygote device:chr_file { read write };
 allow zygote system_prop:property_service set;
 #allow zygote device:chr_file open;
-
+#============= zygote ==============
+allow zygote input_device:chr_file { read write ioctl open };
+allow zygote input_device:dir { read open };

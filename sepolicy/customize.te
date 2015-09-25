@@ -1,3 +1,12 @@
 type customize, domain;
 type customize_exec, exec_type, file_type;
 init_daemon_domain(customize);
+
+#============= customize ==============
+allow customize default_prop:property_service set;
+allow customize init:unix_stream_socket connectto;
+allow customize property_socket:sock_file write;
+allow customize self:capability dac_override;
+allow customize sep_device:chr_file { read write open };
+allow customize sysfs:file write;
+allow customize system_data_file:file { write open };

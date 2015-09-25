@@ -1,0 +1,3 @@
+#============= platform_app ==============
+allow platform_app unlabeled:dir { setattr read create write getattr rmdir remove_name open add_name };
+allow platform_app unlabeled:file { rename setattr read lock create getattr write ioctl unlink open };

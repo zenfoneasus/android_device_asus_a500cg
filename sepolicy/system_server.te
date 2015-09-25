@@ -18,4 +18,7 @@ allow system_server surfaceflinger_tmpfs:file { read write };
 allow system_server default_android_service:service_manager {add};
 allow system_server fuse:dir {search read write};
 #allow system_server init:binder {call };
-
+#============= system_server ==============
+allow system_server recovery_cache_file:dir { read open };
+allow system_server unlabeled:dir { write remove_name add_name };
+allow system_server unlabeled:file { write rename create unlink setattr };
